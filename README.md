@@ -1,10 +1,10 @@
-#**Final-Project**
+#Final-Project
 -------
 Final project proposal<br>
 I want to build a Simon Game. It basically has 4 button with 4 LED like general Simon Game, and I will use the LCD to show what is the level the player in, and show how much time left the player can do this level, after the time finishes, the game will be over, and the LCD will show the result. I want to add a buzzer to play 4 kinds of sound effects for the Simon Game, and I want to add a failure sound effect for the game failure with buzzer. If the player press the buttons in the wrong order, the game will be over.<br>
 <br><br>
 
-#**Project Description**
+#Project Description
 -------
 <br>
 List of parts used: <br>
@@ -25,7 +25,7 @@ Description: <br>
 &emsp;&emsp;The Piano Mode is like a normal piano with one scale, but because of the buzzer, it cannot implement the chord, and it is without the black keys. When player bush the keys, the LED that corresponds to the keys will light up. And when player pushes the mode change button, the mode will change to the Simon Game.<br>
 <br><br>
 
-#**Project Detail and Build Description**<br>
+#Project Detail and Build Description
 -------
 &emsp;&emsp;The beginning of the project, I tried how to use the buzzer to make different sound effects, and search how to do that, then I use the Diatonic table to write the head file "gamut.h" for the diatonic frequency for the buzzer, which will make the data easier to use multiple times and make the main program cleaner. Then, I tried to make some different tones and do the piano mode function to test different tones with different sounds.<br>
 
@@ -40,16 +40,16 @@ Description: <br>
 &emsp;&emsp;Then I think how to implement the time count down. I think it can use interrupt to implement, and I found the information that I can use the Timer1 clock in the Arduino board to control the interrupt, which need the library <TimerOne.h> and <Wire.h>. Then I initialize the Timer1 for 1 second. I create a variable “int simonTimer” which is timer counter. Then I use the Time1 to control the interrupt function “attachInterrupt(simonTime)”  to do the operation for each 1 second interrupt. I write the sub-function “simonTime()” when the interrupt happens, the timer counter “simonTimer” will -1. When the Simon Game finish phase of showing order, the “simonTimer” will become 10. By the Timer1 Interrupt, when the “simonTimer” = 0, the Simon Game will fail. And using the “simonTimer” write the sub-function for display the left time, when the player is in the push button phase, it will call the display function and show the left time in the LCD displayer.<br>
 <br>
 <br>
-#**Project files: **<br>
+**#Project files:** 
 gamut.h<br>
 piano_simon_game.ino<br>
 <br>
-#**Extra libraries: (need install for arduino IDE)(in the library folder)**<br>
+**#Extra libraries: (need install for arduino IDE)(in the library folder)**
 LiquidCrystal_I2C.h<br>
 TimerOne.h<br>
 <br>
 <br>
-#**Sketch:**<br>
+**#Sketch:**<br>
 ![image](https://github.com/xuy50/389-Final-Project/blob/main/sketch.png)
 <br>
 <br>
