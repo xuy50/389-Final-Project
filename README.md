@@ -26,7 +26,7 @@ Description: <br>
 
 #**Project Detail and Build Description**<br>
 <br>
-&emsp;&emsp;The beginning of the project, I tried how to use the buzzer to make different sound effects, and search how to do that, then I use the Diatonic table to write the head file for the diatonic frequency for the buzzer, which will make the data easier to use multiple times and make the main program cleaner. Then, I tried to make some different tones and do the piano mode function to test different tones with different sounds.<br>
+&emsp;&emsp;The beginning of the project, I tried how to use the buzzer to make different sound effects, and search how to do that, then I use the Diatonic table to write the head file "gamut.h" for the diatonic frequency for the buzzer, which will make the data easier to use multiple times and make the main program cleaner. Then, I tried to make some different tones and do the piano mode function to test different tones with different sounds.<br>
 
 &emsp;&emsp;The piano function is a dead loop in the “loop()” function, and call the sub-function, “piano()”, for the Piano mode repeatedly. The button signal was read in “piano()” function. When different button is pushed, the function will check which one it is, then make the specific sound, and then return the specific number for the 74HC595 chip back to the “loop()” function to let the corresponding LED light when the button did not be released. At the beginning, I want to use the buzzer to implement the chord, but the result is the same as PWM, which make the sound was low and inaccuracy, I found that it is possibly because the buzzer does not support chord which make this case, then I change the code to one time one button and one sound, which fix the problem. The piano mode which is the basic part is complete. Because want to implement the piano, so I increase more buttons, and these buttons I also use for the Simon Game, which is not 4 buttons Simon Game, but become a 7 buttons Simon Game, I think it is more interesting and challenging than the original version. Then I create a variable “int mode” which is control the mode change, when the mode = 0, it will be Simon Game mode, if the mode = 1, the mode will be piano mode.<br>
 
@@ -39,7 +39,12 @@ Description: <br>
 &emsp;&emsp;Then I think how to implement the time count down. I think it can use interrupt to implement, and I found the information that I can use the Timer1 clock in the Arduino board to control the interrupt, which need the library <TimerOne.h> and <Wire.h>. Then I initialize the Timer1 for 1 second. I create a variable “int simonTimer” which is timer counter. Then I use the Time1 to control the interrupt function “attachInterrupt(simonTime)”  to do the operation for each 1 second interrupt. I write the sub-function “simonTime()” when the interrupt happens, the timer counter “simonTimer” will -1. When the Simon Game finish phase of showing order, the “simonTimer” will become 10. By the Timer1 Interrupt, when the “simonTimer” = 0, the Simon Game will fail. And using the “simonTimer” write the sub-function for display the left time, when the player is in the push button phase, it will call the display function and show the left time in the LCD displayer.<br>
 <br>
 <br>
-
+#Project files: <br>
+gamut.h<br>
+piano_simon_game.ino<br>
+<br>
+#libraries:<br>
+<br>
 
 References:<br>
 https://www.arduino.cc/en/Tutorial/Foundations<br>
