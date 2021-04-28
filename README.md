@@ -6,7 +6,6 @@ I want to build a Simon Game. It basically has 4 button with 4 LED like general 
 
 #Project Description
 -------
-<br>
 List of parts used: <br>
 Arduino UNO R3 board * 1<br>
 Buttons * 9<br>
@@ -51,6 +50,10 @@ TimerOne.h<br>
 <br>
 **#Sketch:**<br>
 ![image](https://github.com/xuy50/389-Final-Project/blob/main/sketch.png)
+<br>
+<br>
+**#Demo link:**
+
 <br>
 <br>
 References:<br>
