@@ -49,7 +49,7 @@ TimerOne.h
 <br>
 <br>
 #**Sketch:**<br>
-![image](https://github.com/xuy50/389-Final-Project/sketch.png)
+![image](https://github.com/xuy50/389-Final-Project/blob/main/sketch.png)
 <br>
 <br>
 References:<br>
