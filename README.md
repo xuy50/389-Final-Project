@@ -1,10 +1,11 @@
 #**Final-Project**
-
+-------
 Final project proposal<br>
 I want to build a Simon Game. It basically has 4 button with 4 LED like general Simon Game, and I will use the LCD to show what is the level the player in, and show how much time left the player can do this level, after the time finishes, the game will be over, and the LCD will show the result. I want to add a buzzer to play 4 kinds of sound effects for the Simon Game, and I want to add a failure sound effect for the game failure with buzzer. If the player press the buttons in the wrong order, the game will be over.<br>
 <br><br>
 
-#**Project Description**<br>
+#**Project Description**
+-------
 <br>
 List of parts used: <br>
 Arduino UNO R3 board * 1<br>
@@ -25,7 +26,7 @@ Description: <br>
 <br><br>
 
 #**Project Detail and Build Description**<br>
-<br>
+-------
 &emsp;&emsp;The beginning of the project, I tried how to use the buzzer to make different sound effects, and search how to do that, then I use the Diatonic table to write the head file "gamut.h" for the diatonic frequency for the buzzer, which will make the data easier to use multiple times and make the main program cleaner. Then, I tried to make some different tones and do the piano mode function to test different tones with different sounds.<br>
 
 &emsp;&emsp;The piano function is a dead loop in the “loop()” function, and call the sub-function, “piano()”, for the Piano mode repeatedly. The button signal was read in “piano()” function. When different button is pushed, the function will check which one it is, then make the specific sound, and then return the specific number for the 74HC595 chip back to the “loop()” function to let the corresponding LED light when the button did not be released. At the beginning, I want to use the buzzer to implement the chord, but the result is the same as PWM, which make the sound was low and inaccuracy, I found that it is possibly because the buzzer does not support chord which make this case, then I change the code to one time one button and one sound, which fix the problem. The piano mode which is the basic part is complete. Because want to implement the piano, so I increase more buttons, and these buttons I also use for the Simon Game, which is not 4 buttons Simon Game, but become a 7 buttons Simon Game, I think it is more interesting and challenging than the original version. Then I create a variable “int mode” which is control the mode change, when the mode = 0, it will be Simon Game mode, if the mode = 1, the mode will be piano mode.<br>
