@@ -17,6 +17,7 @@ Photoresistor * 1<br>
 330Ω Resistors * 19<br>
 <br>
 **Description: <br>**
+<br>
 &emsp;&emsp;The project is toy that is a Simon game which is a memory game and a piano mode with a scale.<br>
 
 &emsp;&emsp;First when the toy open or reset, the LCD will display the welcome interface, and then will show the options interface. The options interface can choose the Simon Game mode or the piano mode, and only when the toy reset or reopen the options interface will be shown. The first mode is Simon Game mode, this mode is a memory game which has 10 levels for player. The system will give player a order for light, and player will use the right order to push buttons, and the number of the lights order will add one for each level, only one light will light and one button need to be pushed for level one, and the buttons need to be pushed in right order ten times for level ten. Only when player pass the level 10, the player will get the game the clear and congratulation information interface. If the player pushes wrong button or did not push the buttons in right order, the game will fail, in the other case, there are 10 seconds for each level, if the player did not pass the current level in 10 seconds, the displayer will show the left time and current level for player, the game will fail. If the game fails, the displayer will show the final level player reach, and the failure reason, “Wrong order!” or “Time up!” The Simon Game mode will push the Start button to start game, and the start button is also the end button for Simon Game mode, when you are in the game, you can push the button to stop the current game, and it will back to the initial interface for the Simon Game. And there is a mode change button. The button can change the mode between the Simon Game and Piano Mode, whatever player is in anytime. When the player push the mode change button in the Simon game mode, the mode will change to the Piano Mode.<br>
@@ -43,7 +44,7 @@ Photoresistor * 1<br>
 gamut.h<br>
 piano_simon_game.ino<br>
 <br>
-**#Extra libraries: (need install for arduino IDE)(in the library folder)**<br>
+**#Extra libraries(need install for arduino IDE)(in the library folder):**<br>
 LiquidCrystal_I2C.h<br>
 TimerOne.h<br>
 <br>
