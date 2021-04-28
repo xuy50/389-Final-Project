@@ -43,9 +43,15 @@ Description: <br>
 gamut.h<br>
 piano_simon_game.ino<br>
 <br>
-#libraries:<br>
+#Extra libraries: (need install for arduino IDE)(in the library folder)<br>
+LiquidCrystal_I2C.h
+TimerOne.h
 <br>
-
+<br>
+#**Sketch:**<br>
+![image](https://github.com/xuy50/389-Final-Project/sketch.png)
+<br>
+<br>
 References:<br>
 https://www.arduino.cc/en/Tutorial/Foundations<br>
 http://jiader.blogspot.com/2018/08/arduino.html<br>
