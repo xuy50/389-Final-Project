@@ -38,11 +38,11 @@ Photoresistor * 1<br>
 This is the schematic diagram for my project, which show my system how to work.
 <br>
 <br>
-**#Project files:** <br>
+**#[Project files](https://github.com/xuy50/ECE387_Final_Project_Simon_Game/tree/main/piano_simon_game):** <br>
 gamut.h<br>
 piano_simon_game.ino<br>
 <br>
-**#Extra libraries(need install for arduino IDE)(in the library folder):**<br>
+**#[Extra libraries](https://github.com/xuy50/ECE387_Final_Project_Simon_Game/tree/main/library)(need install for arduino IDE)(in the library folder):**<br>
 LiquidCrystal_I2C.h<br>
 TimerOne.h<br>
 <br>
