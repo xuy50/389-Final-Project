@@ -33,6 +33,10 @@ Photoresistor * 1<br>
 
 &emsp;&emsp;Then I think how to implement the time count down. I think it can use interrupt to implement, and I found the information that I can use the Timer1 clock in the Arduino board to control the interrupt, which need the library <TimerOne.h> and <Wire.h>. Then I initialize the Timer1 for 1 second. I create a variable “int simonTimer” which is timer counter. Then I use the Time1 to control the interrupt function “attachInterrupt(simonTime)”  to do the operation for each 1 second interrupt. I write the sub-function “simonTime()” when the interrupt happens, the timer counter “simonTimer” will -1. When the Simon Game finish phase of showing order, the “simonTimer” will become 10. By the Timer1 Interrupt, when the “simonTimer” = 0, the Simon Game will fail. And using the “simonTimer” write the sub-function for display the left time, when the player is in the push button phase, it will call the display function and show the left time in the LCD displayer.<br>
 <br>
+**#Schematic Diagram:** <br>
+![image](https://github.com/xuy50/ECE387_Final_Project_Simon_Game/blob/main/schematic_diagram.png)<br>
+This is the schematic diagram for my project, which show my system how to work.
+<br>
 <br>
 **#Project files:** <br>
 gamut.h<br>
